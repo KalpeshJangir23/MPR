@@ -21,14 +21,26 @@ public class Q1 {
             int mapValue = hat.get(key);
             // System.out.println(key +" "+ mapValue +" "+ key.hashCode());
             int hash = 0;
+            int has=0;
             for (int i = 0; i < 11; i++) {
                 hash = mapValue % 11;
 
+             
+            for (int j = 0; j < 11; j++) {
+                has = mapValue % 11;
+
+            } 
+            if (hash==has) {
+                
+                
+                has=(mapValue+1)%11;
             }
 
-            System.out.println(key + "  " + mapValue + "  " + key.hashCode() + "  " + hash);
+            
+                System.out.println(key + "  " + mapValue + "  " + key.hashCode() + "  " + has +"  "+hash);
+
 
         }
+            
+    }}}
 
-    }
-}
