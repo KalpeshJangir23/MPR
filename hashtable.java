@@ -1,11 +1,10 @@
 import java.util.*;
 
-import javax.print.attribute.IntegerSyntax;
-
 public class hashtable {
     private Hashnode[] bukects;
     private int numofbuckets;
     private int size;
+    private Hashnode head;
 
     public hashtable() {
         this(11);
@@ -41,7 +40,7 @@ public class hashtable {
 
         }
         int bucketindex = getBucketIndex(key);
-        Hashnode head = bukects[bucketindex];
+        head = bukects[bucketindex];
         while (head != null) {
             if (head.key.equals(key)) {
                 head.value = value;
@@ -64,12 +63,20 @@ public class hashtable {
 
     public static void main(String[] args) {
         hashtable table = new hashtable(11);
-        table.put(01, 26);
-        table.put(02, 42);
-        table.put(03, 5);
-        table.put(04, 44);
-        table.put(05, 92);
+        table.put(1, 26);
+        table.put(2, 42);
+        table.put(3, 5);
+        table.put(4, 44);
+        table.put(5, 92);
+        table.put(6, 59);
+        table.put(7, 40);
+        table.put(8, 36);
+        table.put(9, 12);
+        table.put(10, 60);
+        table.put(11, 80);
+
         System.out.println(table.size());
+
     }
 
 }
